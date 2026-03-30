@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4>Minhas Atividades Hoje</h4>
+
+<div id="lista-atividades">
+
+    
+</div>
+
+
+
+
+
+
+{% comment %} <script>
+async function carregarAtividades() {
+
+    const token = localStorage.getItem("access");
+
+    const response = await apiFetch("/api/atividades/minhas_hoje/", {
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    const data = await response.json();
+
+    let container = document.getElementById("atividades");
+    container.innerHTML = "";
+
+    data.forEach(atividade => {
+        container.innerHTML += `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6>${atividade.numero_chamdo}</h6>
+                    <p>${atividade.local}</p>
+                    <p>Status: ${atividade.data_prog}</p>
+                </div>
+            </div>
+        `;
+    });
+}
+
+carregarAtividades();
+</script> {% endcomment %}
+
+{% endblock %}

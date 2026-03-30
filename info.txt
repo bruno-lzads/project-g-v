@@ -1,0 +1,43 @@
+Comando	                               |     Função
+---------------------------------------|------------------------------------------------------------------
+python manage.py runserver	           |     Inicia o servidor local de desenvolvimento.
+python manage.py makemigrations	       |     Cria arquivos de migração a partir de alterações nos modelos.
+python manage.py migrate	           |     Aplica as migrações ao banco de dados.
+python manage.py createsuperuser	   |     Cria um usuário administrador.
+python manage.py shell	               |     Abre um shell Python com o ambiente Django carregado.
+python manage.py startapp nome_app	   |     Cria a estrutura de uma nova aplicação dentro do projeto.
+python manage.py test	               |     Executa os testes automatizados.
+python manage.py collectstatic	       |     Junta todos os arquivos estáticos para produção.
+-----------------------------------------------------------------------------------------------------------
+
+python -m pip install pip --upgrade
+
+python -m venv nomeDoAmbienteVirtual
+
+pip freeze   >>>> para ver todos os programas intalados 
+
+pip freeze > requiments.txt
+
+pip install -r .\requiments.txt >>>> para instalar todos os programas salvos no arquivo txt
+
+deactivate  >>> desativar o ambiente virtual
+
+-----------------------------------------------------------------------------------------------------------
+
+No Django, a class Meta é uma classe interna (nested class) utilizada para definir metadados em modelos (Models),
+formulários (Forms) e serializadores (Serializers).
+Ela permite configurar comportamentos que não são campos de dados propriamente ditos. 
+
+Principais usos nos modelos do Django:
+
+ordering: Define a ordem padrão em que os objetos serão recuperados do banco de dados (ex: por data ou nome).
+
+verbose_name / verbose_name_plural: Define nomes amigáveis para o modelo na interface administrativa.
+
+db_table: Especifica o nome exato da tabela no banco de dados.
+
+abstract = True: Transforma a classe em um modelo abstrato, que serve apenas como base para outros modelos e não cria uma tabela própria.
+
+unique_together / constraints: Define restrições de unicidade para combinações de campos. 
+
+-----------------------------------------------------------------------------------------------------------
